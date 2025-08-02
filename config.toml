@@ -1,0 +1,6 @@
+[server]
+headless = true  # 告诉 Streamlit 它是在后台运行的，不要尝试打开浏览器
+enableCORS = false # 我们由 Flask 来处理跨域
+
+[browser]
+gatherUsageStats = false
