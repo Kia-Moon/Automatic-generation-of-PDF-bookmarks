@@ -76,12 +76,12 @@ with st.sidebar:
                 'font_contains': [], # 为简化UI，此项暂时不提供
                 'font_size': font_size_value,
                 'is_bold': is_bold,
-                'indent_range': indent_range_value
+                'indent_range': indent_range_value  
             }
 
     with st.expander("全局排除规则", expanded=True):
         max_len = st.number_input("标题最大字数", value=40)
-        exclude_chars_str = st.text_input("排除包含以下字符的行", value="¿")
+        exclude_chars_str = st.text_input("排除包含以下字符的行(直接添加无需空格)", value="¿")
         min_y = st.number_input("排除页眉(Y坐标小于)", value=50)
         max_y = st.number_input("排除页脚(Y坐标大于)", value=800)
         dynamic_config['exclusion'] = {
