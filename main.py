@@ -22,13 +22,13 @@ with st.sidebar:
     with st.expander("常见正则表达式参考", expanded=False):
         st.code("""
 # 匹配 "第一章", "第二十章" 等:
-r"^\\s*第[一二三四五六七八九十百]+章\\s*\\S+"
+^\\s*第[一二三四五六七八九十百]+章\\s*\\S+
 # 匹配 “第1章”、“第10章”等:
-r"^\\s*第\\s*\\d+\\s*章.*"
+^\\s*第\\s*\\d+\\s*章.*
 # 匹配 "一、...", "十二、...":
-r"^\\s*[一二三四五六七八九十百]+、\\s*\\S+"
+^\\s*[一二三四五六七八九十百]+、\\s*\\S+
 # 匹配 "1.1", "2.3.4":
-r"^\\s*(\\d+\\.)+\\d*\\s*\\S+"
+^\\s*(\\d+\\.)+\\d*\\s*\\S+
         """, language="python")
 
     # --- 动态生成配置 ---
@@ -81,7 +81,7 @@ r"^\\s*(\\d+\\.)+\\d*\\s*\\S+"
 
     with st.expander("全局排除规则", expanded=True):
         max_len = st.number_input("标题最大字数", value=40)
-        exclude_chars_str = st.text_input("排除包含以下字符的行", value="。？！=")
+        exclude_chars_str = st.text_input("排除包含以下字符的行", value="¿")
         min_y = st.number_input("排除页眉(Y坐标小于)", value=50)
         max_y = st.number_input("排除页脚(Y坐标大于)", value=800)
         dynamic_config['exclusion'] = {
