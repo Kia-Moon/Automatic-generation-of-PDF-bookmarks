@@ -76,7 +76,7 @@ with st.sidebar:
                 'font_contains': [], # 为简化UI，此项暂时不提供
                 'font_size': font_size_value,
                 'is_bold': is_bold,
-                'indent_range': indent_range_value  
+                'indent_range': indent_range_value
             }
 
     with st.expander("全局排除规则", expanded=True):
